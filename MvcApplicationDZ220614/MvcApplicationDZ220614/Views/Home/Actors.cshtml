@@ -1,0 +1,13 @@
+﻿@using System.Collections.Generic;
+@using MvcApplicationDZ220614.Models;
+@model List<Actors>
+@{
+    ViewBag.Title = "Actors";
+}
+<h2>Actors</h2>
+<ul>
+    @foreach (var a in Model)
+    {
+        <li>@a.Name</li>
+    }
+</ul>

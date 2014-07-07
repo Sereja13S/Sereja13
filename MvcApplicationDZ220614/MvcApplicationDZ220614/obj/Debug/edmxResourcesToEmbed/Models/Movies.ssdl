@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище MoviesDBModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Хранилище MoviesDBModelContainer">
+    <EntitySet Name="Actors" EntityType="Хранилище MoviesDBModel.Actors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MovieActors" EntityType="Хранилище MoviesDBModel.MovieActors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Movies" EntityType="Хранилище MoviesDBModel.Movies" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_MovieActors_Actors" Association="Хранилище MoviesDBModel.FK_MovieActors_Actors">
+      <End Role="Actors" EntitySet="Actors" />
+      <End Role="MovieActors" EntitySet="MovieActors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MovieActors_Movies" Association="Хранилище MoviesDBModel.FK_MovieActors_Movies">
+      <End Role="Movies" EntitySet="Movies" />
+      <End Role="MovieActors" EntitySet="MovieActors" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Actors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MovieActors">
+    <Key>
+      <PropertyRef Name="MovieId" />
+      <PropertyRef Name="ActorsId" />
+    </Key>
+    <Property Name="MovieId" Type="int" Nullable="false" />
+    <Property Name="ActorsId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Movies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+    <Property Name="ImageUrl" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <Association Name="FK_MovieActors_Actors">
+    <End Role="Actors" Type="Хранилище MoviesDBModel.Actors" Multiplicity="1" />
+    <End Role="MovieActors" Type="Хранилище MoviesDBModel.MovieActors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actors">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MovieActors">
+        <PropertyRef Name="ActorsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MovieActors_Movies">
+    <End Role="Movies" Type="Хранилище MoviesDBModel.Movies" Multiplicity="1" />
+    <End Role="MovieActors" Type="Хранилище MoviesDBModel.MovieActors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Movies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MovieActors">
+        <PropertyRef Name="MovieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
