@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/PHP/simpleMVC-master2/view/good/index.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/view/good/list.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/test.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/model/service/UserService.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/model/entity/User.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/view/good/edit.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/view/user/users.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/controller/UserController.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/view/user/editUser.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/index.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/view/user/login.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/controller/FrontController.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/util/View.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/model/entity/Good.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/util/Request.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/view/good/categories.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/model/service/GoodService.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/controller/BaseController.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/util/MySQL.php</file>
+            <file>file:/D:/PHP/simpleMVC-master2/controller/GoodsController.php</file>
+        </group>
+    </open-files>
+</project-private>
